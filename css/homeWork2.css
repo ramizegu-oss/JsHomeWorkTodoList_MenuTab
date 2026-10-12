@@ -1,0 +1,51 @@
+body {
+    padding: 20pc;
+    display: flex;
+    gap: 46px;
+    flex-direction: column;
+}
+
+button {
+    text-align: center;
+    width: 14%;
+    margin-bottom: 4pc;
+}
+
+input {
+    margin-bottom: 3pc;
+}
+
+.li-desing {
+    display: flex;
+    position: relative;
+    align-items: center;
+}
+
+p {
+    font-weight: bold;
+    font-size: 21px;
+}
+
+.delete-icon {
+    position: absolute;
+    left: 92%;
+    color: #b10a0a;
+    cursor: pointer;
+}
+
+
+.edit-icon{
+    position: absolute;
+    left: 96%;
+    color: rgb(62, 62, 220);
+    cursor: pointer;
+}
+
+
+.input-desing{
+    position: absolute;
+    top: -8px;
+    color: rgb(62, 62, 220);
+    cursor: pointer;
+
+}

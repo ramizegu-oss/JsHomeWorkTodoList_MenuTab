@@ -1,0 +1,38 @@
+* {
+    transition: all 0.3s;
+}
+
+#header-section .buttons {
+    display: flex;
+    justify-content: center;
+    padding-top: 3pc;
+    gap: 7pc;
+}
+
+button {
+    width: 7pc;
+    border: none;
+    background-color: #709085;
+    border-radius: 11px;
+}
+
+#main-section .content-div {
+    position: relative;
+    padding-top: 6pc;
+}
+
+#main-section .content-div .content {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+#main-section .content-div .content p {
+    width: 30%;
+}
+
+.active {
+    background-color: #0cfeab;
+    color: white;
+}
