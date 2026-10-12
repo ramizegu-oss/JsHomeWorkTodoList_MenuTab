@@ -7,6 +7,18 @@ let deleteBtn = document.querySelectorAll("main ul li i");
 
 let datas = JSON.parse(localStorage.getItem("datas")) || [];
 
+
+buttonAdd.disabled = true;
+
+input.addEventListener("keyup", function () {
+    if (input.value === "") {
+        buttonAdd.disabled = true;
+    }
+    else{
+        buttonAdd.disabled = false;
+    }
+});
+
 datas.forEach((element) => {
     let li = document.createElement("li");
     let p = document.createElement("p");
@@ -40,20 +52,20 @@ datas.forEach((element) => {
         oldP.remove();
         li.prepend(input);
 
-        input.addEventListener("keydown",function(e){
+        input.addEventListener("keydown", function (e) {
             if (e.key === "Enter") {
-                let p = document.createElement("p")
-                p.innerHTML = `<p>${input.value}</p>`
+                let p = document.createElement("p");
+                p.innerHTML = `<p>${input.value}</p>`;
                 input.remove();
                 li.prepend(p);
 
-                let index = datas.indexOf(oldP.innerText)
+                let index = datas.indexOf(oldP.innerText);
                 if (index !== -1) {
                     datas[index] = input.value;
-                    localStorage.setItem("datas",JSON.stringify(datas))
+                    localStorage.setItem("datas", JSON.stringify(datas));
                 }
             }
-        })
+        });
     });
 
     p.innerText = element;
@@ -102,20 +114,20 @@ buttonAdd.addEventListener("click", function () {
         oldP.remove();
         li.prepend(input);
 
-        input.addEventListener("keydown",function(e){
+        input.addEventListener("keydown", function (e) {
             if (e.key === "Enter") {
-                let p = document.createElement("p")
-                p.innerHTML = `<p>${input.value}</p>`
+                let p = document.createElement("p");
+                p.innerHTML = `<p>${input.value}</p>`;
                 input.remove();
                 li.prepend(p);
 
-                let index = datas.indexOf(oldP.innerText)
+                let index = datas.indexOf(oldP.innerText);
                 if (index !== -1) {
                     datas[index] = input.value;
-                    localStorage.setItem("datas",JSON.stringify(datas))
+                    localStorage.setItem("datas", JSON.stringify(datas));
                 }
             }
-        })
+        });
     });
 
     li.append(iconDel);
